@@ -149,7 +149,7 @@
         .secondSection {
             max-width: 80vw;
             margin: auto;
-            height: 80vh;
+            height: 90vh;
         }
 
         .secondSection h1 {
@@ -168,10 +168,6 @@
             display: flex;
             padding: 23px 122px;
             justify-content: space-evenly;
-        }
-
-        .footer-first text {
-            margin-left: 20px;
         }
 
         .personalDetail h3,
@@ -211,7 +207,7 @@
 
         /* Style individual project cards */
         .project-card {
-            background-color: #fff;
+            background-color: black;
             border-radius: 5px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             margin: 1rem;
@@ -236,11 +232,11 @@
         }
 
         .project-description h3 {
-            color: #333;
+            color: blueviolet;
         }
 
         .project-description p {
-            color: #666;
+            color: white;
         }
 
         .project-button {
@@ -328,7 +324,7 @@
             display: block;
         }
 
-        
+
 
         /* css for small screen*/
         @media only screen and (max-width:1100px) {
@@ -422,17 +418,43 @@
             ul {
                 font-size: 13px;
             }
+
+            #about {
+                display: block;
+                padding: 0;
+                margin: 6vh;
+            }
+
+            .personalDetail text {
+                font-size: 14px;
+            }
+
+            .tab-links {
+                margin-right: 30px;
+            }
+
+            nav ul li {
+                margin: 0 17px;
+            }
+
+            .projects {
+                margin: 0rem;
+            }
+
+            .secondSection h1 {
+                font-size: 1.3rem;
+            }
         }
     </style>
 </head>
 
 <body>
-    <header>
+    <header id="home">
         <nav>
             <div class="left">Dharmender's Portfolio</div>
             <div class="right">
                 <ul>
-                    <li><a href="/">Home</a></li>
+                    <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#project">Projects</a></li>
                     <li><a href="#contact">Contact Me</a></li>
@@ -444,7 +466,7 @@
         <section class="firstSection">
             <div class="leftSection">
                 Hi, My name is <span class="purple">Dharmender</span>
-                <div>and i am a passionate</div>
+                <div>and I am a passionate</div>
                 <span id="element"></span><br>
                 <button class="button"><a
                         href="https://drive.google.com/file/d/11PKbzq9WtMXeCoSWoa-jf-npcB1Zjdl3/view?usp=drive_link"
@@ -474,9 +496,9 @@
                     </div>
                     <div class="project-description">
                         <h3>Whatsapp Chat Analyser</h3>
-                        <p>Description of Project 1. This is a sample project description. You can provide details about
-                            your project here.</p>
-                        <button class="button project-button">View Project</button>
+                        <p>Description: WhatsApp chat analyzer reveals insights on message frequency, words, engagement, media, topics, entities, and visualizations.</p>
+                        <button class="button project-button"><a href="https://insight-0f-whatsapp.streamlit.app/">Project</a></button>
+                        <button class="button project-button"><a href="https://github.com/linuso71/whatsappChat-analyser">Code</a></button>
                     </div>
                 </div>
 
@@ -486,10 +508,10 @@
                         <img src="images/p2.jpg" alt="Project 2">
                     </div>
                     <div class="project-description">
-                        <h3>Project 2</h3>
-                        <p>Description of Project 2. This is a sample project description. You can provide details about
-                            your project here.</p>
-                        <button class="button project-button">View Project</button>
+                        <h3>Startup Analysis (dashboard)                        </h3>
+                        <p>Description: Comprehensive analysis of Indian funding landscape, investors, and individual contributions, providing valuable insights for strategic decisions.</p>
+                        <button class="button project-button"><a href="https://selg26pdxd5m5u3jh6gbae.streamlit.app/">Project</a></button>
+                        <button class="button project-button"><a href="https://github.com/linuso71/startupAnalysis-dashboard">Code</a></button>
                     </div>
                 </div>
 
@@ -497,29 +519,27 @@
             </section>
 
             <section class="projects">
-                <!-- Project 1 -->
+                <!-- Project 3 -->
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="images/p1.png" alt="Project 1">
+                        <img src="images/p3.jpg" alt="Project 1">
                     </div>
                     <div class="project-description">
-                        <h3>Project 1</h3>
-                        <p>Description of Project 1. This is a sample project description. You can provide details about
-                            your project here.</p>
-                        <button class="button project-button">View Project</button>
+                        <h3>IPL Analysis Api</h3>
+                        <p>Description: IPL Analysis API offers team comparison, player past performance, and head-to-head stats, enabling in-depth analysis for strategic decisions.</p>
+                        <button class="button project-button"><a href="https://github.com/linuso71/ipl-api-service">View Project</a></button>
                     </div>
                 </div>
 
-                <!-- Project 2 -->
+                <!-- Project 4 -->
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="images/p2.jpg" alt="Project 2">
+                        <img src="images/p4.jpg" alt="Project 2">
                     </div>
                     <div class="project-description">
-                        <h3>Project 2</h3>
-                        <p>Description of Project 2. This is a sample project description. You can provide details about
-                            your project here.</p>
-                        <button class="button project-button">View Project</button>
+                        <h3>News App</h3>
+                        <p>Description: News app delivers real-time top headlines using API, ensuring users stay updated with the latest live news effortlessly.</p>
+                        <button class="button project-button"><a href="https://github.com/linuso71/NewsApp">View Project</a></button>
                     </div>
                 </div>
 
@@ -533,16 +553,11 @@
             <div class="container">
                 <div class="row">
                     <div class="about-col-1">
-                        <img src="images/about1.jpg" alt="">
+                        <img src="images/about2.png" alt="">
                     </div>
                     <div class="about-col-1">
                         <h1 class="sub-title">About Me</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quibusdam assumenda iure
-                            alias porro laudantium ullam excepturi minus voluptas, labore nesciunt vero praesentium ipsa
-                            aliquam accusamus dolorem et provident quod.Lorem ipsum dolor sit amet consectetur
-                            adipisicing elit. Eos obcaecati rem quibusdam commodi nesciunt vero odio, exercitationem
-                            iusto quasi, cumque voluptate iure sunt architecto saepe incidunt nemo doloremque adipisci
-                            autem.</p>
+                        <p>I am a dedicated data analyst and scientist with a passion for unraveling complex data puzzles. Armed with a keen analytical mind and expertise in data-driven insights, I transform raw information into meaningful solutions. My journey involves deciphering patterns, conducting in-depth analyses, and crafting actionable recommendations, all driven by a deep curiosity and a commitment to making data tell compelling stories.</p>
                         <div class="tab-titles">
                             <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
                             <p class="tab-links" onclick="opentab('experience')">Experience</p>
@@ -565,8 +580,8 @@
                         <div class="tab-contents" id="education">
                             <ul>
                                 <li><span>Bachelor of Engineering</span><br>2019-2023 8.48 CGPA</li>
-                                <li><span>12th Class Science</span><br>2018-2019 73.8 CGPA</li>
-                                <li><span>10th Class</span><br>2018-2019 73.8 CGPA</li>
+                                <li><span>12th Class Science</span><br>2018-2019 73.8 %</li>
+                                <li><span>10th Class</span><br>2016-2017 72.2 %</li>
                             </ul>
                         </div>
                     </div>
@@ -600,7 +615,7 @@
             </div>
             <div class="footer-third">
                 <ul>
-                    <li><a href="/">Home</a></li>
+                    <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#project">Projects</a></li>
                 </ul>
@@ -616,7 +631,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <script>
         var typed = new Typed('#element', {
-            strings: ['<i>Data</i> Scientist.', '&amp; Data Analyst.'],
+            strings: ['<i>Data</i> Analyst.', '&amp; Data Scientist.'],
             typeSpeed: 50,
         });
 
